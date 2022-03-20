@@ -22,15 +22,15 @@ main {
   padding: 60px;
 }
 
-.search_box {
+.search_bar {
   text-align: center;
-  width: 60%;
-  margin: 0 80px;
+  width: 70px;
+  margin: 0;
 }
 
 .search_react .search_bar {
   display: block;
-  width: 75%;
+  width: 99%;
   padding: 10px;
 
   appearance: none;

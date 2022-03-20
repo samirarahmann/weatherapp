@@ -40,8 +40,7 @@ function App() {
   useEffect(() => {
     fetchWeather();
   }, [latitude, longitude]);
-
-
+  
 
   const search_the_area = press => {
     if (press.key === "Enter") {
@@ -68,7 +67,7 @@ function App() {
       <main>
         <div main_screen_container="home_page" >
            
-          <div className="app__container" id="main_screen">
+          <div className="app_container" id="main_screen">
             <div className="Currentinfo" >
         <div>Current Location</div>
         <div>{cityName}</div>
