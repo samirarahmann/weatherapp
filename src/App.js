@@ -60,10 +60,10 @@ function App() {
     let month = d.getMonth();
     let period  = d.getFullYear();
 
-    return `${number} - ${month} - ${period}`
+    return `${number} - ${month + 1} - ${period}`
   }
   return (   
-      <div className="app">
+    <div className={(typeof weather1.main != "undefined") ? ((weather1.main.temp > 18) ? 'app warm' : 'app') : 'app'}>
       <main>
         <div main_screen_container="home_page" >
            
@@ -119,3 +119,4 @@ function App() {
 }
 
 export default App;
+//hello
