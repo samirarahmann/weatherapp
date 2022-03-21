@@ -40,7 +40,8 @@ function App() {
   useEffect(() => {
     fetchWeather();
   }, [latitude, longitude]);
-  
+
+
 
   const search_the_area = press => {
     if (press.key === "Enter") {
@@ -55,17 +56,23 @@ function App() {
   }
   const time_date = (d) => {
     
-    
     let number = d.getDate();
     let month = d.getMonth();
     let period  = d.getFullYear();
 
-    return `${number} - ${month + 1} - ${period}`
+    return `${number} - ${month} - ${period}`
   }
-  return (   
-    <div className={(typeof weather1.main != "undefined") ? ((weather1.main.temp > 18) ? 'app warm' : 'app') : 'app'}>
+
+
+  return (  
+     
+      <div className="app">
       <main>
         <div main_screen_container="home_page" >
+
+        <div className='CurrentLocation'>
+          <div><h1>{cityName}</h1></div>
+        </div>
            
           <div className="app_container" id="main_screen">
             <div className="Currentinfo" >
@@ -85,7 +92,7 @@ function App() {
         <div className="date1">{time_date(new Date())}</div>
         </div>
       </div>
-    
+      
         </div>
         <div className="search_react">
           <input 
@@ -97,6 +104,7 @@ function App() {
             onKeyPress={search_the_area}
           />
         </div>
+
         {(typeof weather1.main != "undefined") ? (
         <div>
         <div className="location_react">
@@ -119,4 +127,3 @@ function App() {
 }
 
 export default App;
-//hello
